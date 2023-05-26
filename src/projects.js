@@ -1,11 +1,12 @@
 export default Dependencies;
+import './todo.js'
 
 const Dependencies = (() => {
     const defaultProject = new Project('Default');
-    const projects = [defaultProject];
+    const project = [defaultProject];
 
     return {
-        projects,
+        project,
         defaultProject,
     };
 })();
@@ -16,4 +17,8 @@ export default class Project {
         this.id = id;
         this.toDos = [];
     }
+}
+
+function createProject(name) {
+    Dependencies.project.push(new Project(name))
 }

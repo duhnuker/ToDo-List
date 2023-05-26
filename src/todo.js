@@ -9,6 +9,16 @@ export class ToDo {
     }
 }
 
-let defaultToDo = new ToDo('Clean', 'High', 'Not Done', '');
+export function createToDo (name, priority, isCompleted, date, projectToInsert = '') {
+    let todo = new ToDo(name, priority, isCompleted, date)
+    if (projectToInsert === '') {
+        Dependencies.defaultProject.project.push(todo)
+    }
+    Dependencies.project.forEach((currentProject) => {
+        if (currentProject.name === projectToInsert) {
+            Dependencies.defaultProject.project.push(todo)
+            currentProject.project.push(todo)
+        }
+    })
+}
 
-console.log(defaultToDo);
