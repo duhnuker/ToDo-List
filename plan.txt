@@ -1,5 +1,6 @@
 To Do List: 
     basic requirements:
+        default project upon entering
         user can create projects
         each project has a unique to do List
         user can choose which project to do's go into
