@@ -1,43 +1,68 @@
-To Do List: 
-    basic requirements:
-        user can create projects
-        each project has a unique to do List
-        user can choose which project to do's go into
+// s1, create a folder
+// createFolder('Groceries')
+// s2, create folder, create todo
+// createFolder('School')
+// createTodo(
+//   'Pencils',
+//   'No.2 pencils needed for math',
+//   '01-08-2023',
+//   1,
+//   'School'
+// )
+// s3, create todo(adds to desired folder)
+// createTodo(
+//   'Gas',
+//   'Grab gas this Tuesday',
+//   '12-27-2022',
+//   2,
+// )
+// s4, view all folders created
+// showFolders()
+// s5, create 3 todo's in 1 folder, view all todo's in that 1 folder
+// createFolder('Appliances')
+// createTodo(
+//   'Refrigerator',
+//   'Three door fridge',
+//   '12-25-2022',
+//   1,
+//   'Appliances'
+// )
+// createTodo(
+//   'Microwave',
+//   'Small microwave',
+//   '1-10-2022',
+//   1,
+//   'Appliances'
+// )
+// createTodo(
+//   'Shaker',
+//   '1 liter smoothie shaker',
+//   '12-30-2022',
+//   1,
+//   'Appliances'
+// )
+// showTodos('Appliances')
+// s6, view 1 todo
+// showTodo('Microwave')
+// s7, delete single todo
+// deleteTodo(
+//   'Shaker',
+//   '12-30-2022',
+//   1
+// )
+// s8, delete whole folder and its todo's
+// deleteFolder('School')
 
-    Project object: object
-        stores lists as objects
-        can be created
-        can be deleted
-        can be edited
-
-    To do list object: array
-        stores items to do
-            each to do:
-                can be created
-                edited
-                deleted
-                added to a list
-                marked done
-                marked not done
-                can be given a priority
-
-    Functions:
-        create list item
-        edit list item
-        delete list item
-        add list item to list
-
-        crate list
-        edit lists
-        delete lists
-        add lists to projects
-
-        create project
-        edit project
-        delete project
-        add project to user instance
-
-    shared functions:
-        setting priority
-        deleting from UI 
-        add to UI
+ * notes:
+ * -todos need to be objects, kinda like the 'books'
+ *  preset for library
+ * -have folders of 'todo's
+ * -have a module file for each thing
+ * -ui should be able to:
+ *    view of multiple folders
+ *    view of multiple 'todo's
+ *    view 1 full todo
+ *    delete todo
+ *    delete folder
+ * -use date-fns library
+ * -use localStorage to save to local browser
