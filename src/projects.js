@@ -1,5 +1,4 @@
-import './todo.js'
-import { populateStorage } from './local-storage'; 
+import createToDo from './todo.js';
 
 export default class Project {
     constructor(name, id) {
@@ -12,7 +11,6 @@ export default class Project {
 function createProject(name) {
     allToDoContainer.projects.push(new Project(name));
 }
-
 
 
 
