@@ -1,5 +1,3 @@
-import createToDo from './todo.js';
-
 export default class Project {
     constructor(name, id) {
         this.name = name;
@@ -13,4 +11,8 @@ function createProject(name) {
 }
 
 
+let project1 = new Project("Groceries", "5920");
 
+console.log(project1);
+
+export { createProject };

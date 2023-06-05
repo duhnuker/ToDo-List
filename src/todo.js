@@ -1,6 +1,6 @@
 import Project from "./projects";
 
-export let allToDoContainer = (function() {
+let allToDoContainer = (function() {
 
     let defaultProjectFolder = new Project('Default');
     let projects = [defaultProject];
