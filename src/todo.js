@@ -1,5 +1,5 @@
-export { ToDo };
-import { Project } from './projects.js';
+import { globalContainer } from './index.js';
+export { ToDo, createToDo };
 
 class ToDo {
     constructor(description, priority, isCompleted, date) {
@@ -11,14 +11,14 @@ class ToDo {
 }
 
 function createToDo(
-    name, 
+    description, 
     priority, 
     isCompleted, 
     date,
     insertToProject = ''
     ) {
         //if no project name insert to defaultProjectFolder
-    let todo = new ToDo(name, priority, isCompleted, date);
+    let todo = new ToDo(description, priority, isCompleted, date);
     if (insertToProject === '') {
         globalContainer.defaultProjectFolder.push(todo);
     }
