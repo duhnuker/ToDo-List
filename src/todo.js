@@ -1,19 +1,9 @@
-import Project from "./projects";
+export { ToDo };
+import { Project } from './projects.js';
 
-let allToDoContainer = (function() {
-
-    let defaultProjectFolder = new Project('Default');
-    let projects = [defaultProject];
-
-    return {
-        defaultProjectFolder,
-        projects,
-    }
-})();
-
-export class ToDo {
-    constructor(name, priority, isCompleted, date) {
-        this.name = name;
+class ToDo {
+    constructor(description, priority, isCompleted, date) {
+        this.description = description;
         this.priority = priority;
         this.isCompleted = isCompleted;
         this.date = date;
@@ -30,11 +20,11 @@ function createToDo(
         //if no project name insert to defaultProjectFolder
     let todo = new ToDo(name, priority, isCompleted, date);
     if (insertToProject === '') {
-        allToDoContainer.defaultProjectFolder.push(todo);
+        globalContainer.defaultProjectFolder.push(todo);
     }
-    allToDoContainer.projects.forEach((currentProject) => {
+    globalContainer.projects.forEach((currentProject) => {
         if (currentProject.name === insertToProject) {
-            allToDoContainer.defaultProjectFolder.push(todo)
+            globalContainer.defaultProjectFolder.push(todo)
             currentProject.projects.push(todo)
         }
     })

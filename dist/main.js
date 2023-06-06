@@ -1,1 +1,1 @@
-(()=>{"use strict";let s=new class{constructor(s,t){this.name=s,this.id=t,this.toDos=[]}}("Groceries","5920");console.log(s)})();
+(()=>{"use strict";var e={d:(t,o)=>{for(var r in o)e.o(o,r)&&!e.o(t,r)&&Object.defineProperty(t,r,{enumerable:!0,get:o[r]})},o:(e,t)=>Object.prototype.hasOwnProperty.call(e,t)};e.d({},{J:()=>o});class t{constructor(e,t){this.name=e,this.toDos=[]}}let o=function(){let e=new t("Default");return{defaultProjectFolder:e,projects:[e]}}();o.projects.push(new t("Groceries")),console.log(o)})();
