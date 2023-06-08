@@ -2,12 +2,13 @@ export { Project, createProject };
 import { globalContainer } from "./index.js";
 
 class Project {
-    constructor(name, id) {
+    constructor(name) {
         this.name = name;
-        this.toDos = [];
+        this.toDoArray = [];
     }
 }
 
 function createProject(name) {
-    globalContainer.projects.push(new Project(name));
+    globalContainer.allProjects.push(new Project(name));
 }
+

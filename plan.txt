@@ -3,10 +3,9 @@
 // s2, create folder, create todo
 // createFolder('School')
 // createTodo(
-//   'Pencils',
 //   'No.2 pencils needed for math',
-//   '01-08-2023',
-//   1,
+//   'High'
+//   'Not Complete,
 //   'School'
 // )
 // s3, create todo(adds to desired folder)

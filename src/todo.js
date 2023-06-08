@@ -1,5 +1,5 @@
 import { globalContainer } from './index.js';
-export { ToDo, createToDo };
+export { ToDo };
 
 class ToDo {
     constructor(description, priority, isCompleted, date) {
@@ -10,22 +10,23 @@ class ToDo {
     }
 }
 
-function createToDo(
-    description, 
-    priority, 
-    isCompleted, 
-    date,
-    insertToProject = ''
-    ) {
-        //if no project name insert to defaultProjectFolder
-    let todo = new ToDo(description, priority, isCompleted, date);
-    if (insertToProject === '') {
-        globalContainer.defaultProjectFolder.push(todo);
-    }
-    globalContainer.projects.forEach((currentProject) => {
-        if (currentProject.name === insertToProject) {
-            globalContainer.defaultProjectFolder.push(todo)
-            currentProject.projects.push(todo)
-        }
-    })
-}
+
+// function createToDo(
+//     description, 
+//     priority, 
+//     isCompleted, 
+//     date,
+//     insertToProject = ''
+//     ) {
+//         //if no project name insert to allToDoContainer
+//     let todo = new ToDo(description, priority, isCompleted, date);
+//     if (insertToProject === '') {
+//         globalContainer.allToDoContainer.push(todo);
+//     }
+//     globalContainer.allProjects.forEach((currentProject) => {
+//         if (currentProject.name === insertToProject) {
+//             globalContainer.allToDoContainer.push(todo)
+//             currentProject.allProjects.push(todo)
+//         }
+//     })
+// }
