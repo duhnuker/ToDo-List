@@ -45,12 +45,11 @@ let todo4 = new ToDo('Take out the trash', 'High', 'Not Complete', '09/06/2023')
 
 globalContainer.allProjects[3].toDoArray.push(todo2, todo3, todo4);
 
-//s6
+//s6 showToDo()
 
+//s7
+// delete ToDo with splice()
 
-
-
-
-
+//s8 deleteFolder('ToDo1,ToDo2') use array.length = 0;
 
 
