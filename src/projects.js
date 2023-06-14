@@ -1,4 +1,4 @@
-export { Project, createProject };
+export { Project, createProject, showProjects };
 import { globalContainer } from "./index.js";
 
 // //s1 create a folder
@@ -12,11 +12,15 @@ class Project {
         this.toDoArray = [];
     }
 
-    showToDo(){
-        this.toDoArray.forEach((todo) => {
-        console.log(todo);
-        })
-    }
+    // showToDo(){
+    //     this.toDoArray.forEach((todo) => {
+    //     console.log(todo);
+    //     })
+    // }
+}
+
+function showProjects() {
+    console.log(globalContainer.allProjects);
 }
 
 function createProject(name) {

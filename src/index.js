@@ -20,10 +20,6 @@ createToDo('Wear a tie', 'High', 'Not Complete', '15/06/2023', 'School');
 console.log(globalContainer.allProjects, 'all projects');
 console.log(globalContainer.allToDoContainer, 'allToDoContainer(default container)');
 
-// s4, view all folders created
-
-//showfolders()
-
 // //s5 create 3 todo's in 1 folder, view all todo's in that 1 folder
 
 // createProject('Cleaning');

@@ -11,20 +11,6 @@ class ToDo {
     }
 }
 
-//s2 create folder, create todo
-
-// createProject('School');
-
-// let todo1 = new ToDo('Get two pencils for math', 'High', 'Not Complete', '09/06/2023');
-
-// //s3 create todo(adds to desired folder)
-
-// //adds to project allToDoContainer's toDoArray
-// globalContainer.allProjects[0].toDoArray.push(todo1);
-
-// //adds to project School's toDoArray
-// globalContainer.allProjects[2].toDoArray.push(todo1);
-
 function createToDo(
     description, 
     priority, 
@@ -32,7 +18,6 @@ function createToDo(
     date,
     insertToProject = ''
     ) {
-        //if no project name insert to allToDoContainer
     let todo = new ToDo(description, priority, isCompleted, date);
     if (insertToProject === '') {
         globalContainer.allToDoContainer.toDoArray.push(todo);
