@@ -13,51 +13,40 @@ let globalContainer = (function() {
     }
 })();
 
+createProject('School')
 
-//s1
+createToDo('Wear a tie', 'High', 'Not Complete', '15/06/2023', 'School');
 
-createProject('Groceries');
-console.log(globalContainer);
+console.log(globalContainer.allProjects, 'all projects');
+console.log(globalContainer.allToDoContainer, 'allToDoContainer(default container)');
 
-//s2
+// s4, view all folders created
 
-createProject('School');
+//showfolders()
 
-let todo1 = new ToDo('Get two pencils for math', 'High', 'Not Complete', '09/06/2023');
+// //s5 create 3 todo's in 1 folder, view all todo's in that 1 folder
 
-//s3
+// createProject('Cleaning');
 
-//adds to project allToDoContainer's toDoArray
-globalContainer.allProjects[0].toDoArray.push(todo1);
+// let todo2 = new ToDo('Clean the kitchen', 'Medium', 'Not Complete', '09/06/2023');
+// let todo3 = new ToDo('Wipe down the tv screen', 'Low', 'Not Complete', '09/06/2023');
+// let todo4 = new ToDo('Take out the trash', 'High', 'Not Complete', '09/06/2023');
 
-//adds to project School's toDoArray
-globalContainer.allProjects[2].toDoArray.push(todo1);
+// //Needs to by default be added to allToDoContainer
+// globalContainer.allProjects[0].toDoArray.push(todo2, todo3, todo4);
+// //Then is added to Cleaning Project
+// globalContainer.allProjects[3].toDoArray.push(todo2, todo3, todo4);
 
-//s4 showfolders()
+// //s6 view 1 todo
 
-//s5
+// console.log(globalContainer.allProjects[3].toDoArray[1], 's6');
 
-createProject('Cleaning');
+// //s7 delete single todo
+// //remove from allToDoContainer
+// console.log(globalContainer.allProjects[0].toDoArray.splice(1,1), 's7');
+// //remove from Cleaning toDoArray
+// console.log(globalContainer.allProjects[3].toDoArray.splice(0,1), 's7');
 
-let todo2 = new ToDo('Clean the kitchen', 'Medium', 'Not Complete', '09/06/2023');
-let todo3 = new ToDo('Wipe down the tv screen', 'Low', 'Not Complete', '09/06/2023');
-let todo4 = new ToDo('Take out the trash', 'High', 'Not Complete', '09/06/2023');
+// //s8 delete whole folder and its todo's
 
-//Needs to by default be added to allToDoContainer
-globalContainer.allProjects[0].toDoArray.push(todo2, todo3, todo4);
-//Then is added to Cleaning Project
-globalContainer.allProjects[3].toDoArray.push(todo2, todo3, todo4);
-
-//s6
-
-console.log(globalContainer.allProjects[3].toDoArray[1], 's6');
-
-//s7
-//remove from allToDoContainer
-console.log(globalContainer.allProjects[0].toDoArray.splice(1,1), 's7');
-//remove from Cleaning toDoArray
-console.log(globalContainer.allProjects[3].toDoArray.splice(0,1), 's7');
-
-//s8
-
-console.log(globalContainer.allProjects.splice(1,1), 's8'); //position one, 1 item removed//
+// console.log(globalContainer.allProjects.splice(1,1), 's8'); //position one, 1 item removed//
