@@ -1,4 +1,4 @@
-export { Project, createProject, showProjects };
+export { Project, createProject, showProjects, showProjectToDos };
 import { globalContainer } from "./index.js";
 
 // //s1 create a folder
@@ -27,3 +27,13 @@ function createProject(name) {
     globalContainer.allProjects.push(new Project(name));
 }
 
+function showProjectToDos(folderToOpen = '') {
+    if (folderToOpen === '') {
+        console.log(globalContainer.allProjects.toDoArray);
+    }
+    globalContainer.allProjects.forEach((currentProject) => {
+        if (currentProject === folderToOpen) {
+            console.log(currentProject.toDoArray);
+        }
+    })
+}

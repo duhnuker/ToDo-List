@@ -1,4 +1,4 @@
-import { Project, createProject } from './projects.js';
+import { Project, createProject, showProjectToDos, showProjects } from './projects.js';
 import { ToDo, createToDo } from './todo.js';
 export { globalContainer };
 
@@ -17,8 +17,8 @@ createProject('School')
 
 createToDo('Wear a tie', 'High', 'Not Complete', '15/06/2023', 'School');
 
-console.log(globalContainer.allProjects, 'all projects');
 console.log(globalContainer.allToDoContainer, 'allToDoContainer(default container)');
+showProjects();
 
 // //s5 create 3 todo's in 1 folder, view all todo's in that 1 folder
 
