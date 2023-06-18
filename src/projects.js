@@ -1,10 +1,5 @@
-export { Project, createProject, showProjects, showProjectToDos };
+export { Project, createProject, showProjects, deleteProject };
 import { globalContainer } from "./index.js";
-
-// //s1 create a folder
-
-// createProject('Groceries');
-// console.log(globalContainer);
 
 class Project {
     constructor(name) {
@@ -12,11 +7,11 @@ class Project {
         this.toDoArray = [];
     }
 
-    // showToDo(){
-    //     this.toDoArray.forEach((todo) => {
-    //     console.log(todo);
-    //     })
-    // }
+    showToDo(){
+        this.toDoArray.forEach((todo) => {
+        console.log(todo);
+        })
+    }
 }
 
 function showProjects() {
@@ -27,13 +22,10 @@ function createProject(name) {
     globalContainer.allProjects.push(new Project(name));
 }
 
-function showProjectToDos(folderToOpen = '') {
-    if (folderToOpen === '') {
-        console.log(globalContainer.allProjects.toDoArray);
-    }
+function deleteProject(projectToDelete) {
     globalContainer.allProjects.forEach((currentProject) => {
-        if (currentProject === folderToOpen) {
-            console.log(currentProject.toDoArray);
-        }
+        //get index of currentProject so it can be spliced out
+        let index = globalContainer.allProjects.indexOf(currentProject);
+        globalContainer.allProjects.splice(index, 1);
     })
 }

@@ -1,6 +1,6 @@
 import { globalContainer } from './index.js';
 import { Project } from './projects.js';
-export { ToDo, createToDo };
+export { ToDo, createToDo, showProjectToDos };
 
 class ToDo {
     constructor(description, priority, isCompleted, date) {
@@ -29,3 +29,15 @@ function createToDo(
         }
     })
 }
+
+function showProjectToDos(folderToOpen = '') {
+    if (folderToOpen === '') {
+        console.log(globalContainer.allProjects.toDoArray);
+    }
+    globalContainer.allProjects.forEach((currentProject) => {
+        if (currentProject === folderToOpen) {
+            console.log(currentProject.toDoArray);
+        }
+    })
+}
+
