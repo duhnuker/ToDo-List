@@ -41,3 +41,10 @@ function showProjectToDos(folderToOpen = '') {
     })
 }
 
+// function deleteToDo(todotoDelete) {
+//     globalContainer.allProjects.currentProject.toDoArray.forEach((todo) => {
+//         let index = globalContainer.currentProject.allProjects.toDoArray.indexOf(todo);
+//         globalContainer.allProjects.currentProject.allProjects.toDoArray.splice(index, 1);
+//     })
+// }
+

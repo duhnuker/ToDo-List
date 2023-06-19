@@ -22,6 +22,7 @@ function createProject(name) {
     globalContainer.allProjects.push(new Project(name));
 }
 
+//having issues where selected array is deleted, but also alltodoContainer is gone or invisible?
 function deleteProject(projectToDelete) {
     globalContainer.allProjects.forEach((currentProject) => {
         //get index of currentProject so it can be spliced out
