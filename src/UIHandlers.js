@@ -15,3 +15,9 @@ function displayWeekTab() {
 function displayMonthTab() {
 
 }
+
+function displayProjectForm() {
+    document.querySelector('#addProject').addEventListener('click', function(event) {
+    //create form
+    } )
+}
