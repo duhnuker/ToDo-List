@@ -1,0 +1,29 @@
+1. Basic html and css design
+2. Create required modules (Index.js, ToDo.js, UI.js..)
+3. Create *Local Storage module*
+4. Implement basic Project and ToDo objects with the basic functions they need (setname, addToDo, setDate...)
+5. Create UI class (
+    requirements:
+    1. load projects from local storage, or load default projects if empty
+    2. add project
+    3. delete project
+    4. rename project
+    5. open project
+    6. add ToDo
+    7. delete ToDo
+    8. rename ToDo
+    9. change ToDo date
+)
+6. Plan out each module, (state each function and comment the functionality in words under)
+
+UI function example
+   static addProject() {
+    //show popup
+    //cancel - hide popup
+    //add - create popup
+    //create element and addEventListener (handleProjectNutton)
+    //add to todolist
+    //add to UI
+    //save local
+    //hide popup
+  }
