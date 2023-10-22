@@ -4,11 +4,15 @@ export default class ToDo {
         this.dueDate = dueDate
     }
 
-createtoDo(name) {
+setToDoName(name) {
 
 }
 
-gettoDo() {
+setToDoDate(dueDate) {
+    
+}
+
+getToDo() {
 
 }
 
