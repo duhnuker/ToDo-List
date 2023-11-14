@@ -5,16 +5,19 @@ export default class ToDo {
     }
 
 setToDoName(name) {
+    this.name = name;
+}
 
+getToDoName() {
+    return this.name
 }
 
 setToDoDate(dueDate) {
-    
+    this.dueDate = duedate;
 }
 
-getToDo() {
-
+getToDoDate() {
+    return this.dueDate
 }
-
 
 }
