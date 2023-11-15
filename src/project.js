@@ -5,26 +5,27 @@ export default class Project {
     }
 
     setProjectName(name) {
-    
+        this.name = name;
     }
 
     getProjectName() {
-
+        return this.name;
     }
 
     getAllToDos() {
-
+        return this.todoContainer;
     }
 
-    getToDo(toDoName) {
-
+    getToDo(toDoName) { 
+        return this.todoContainer.find((todo) => (todo.name = todoName)); 
     }
 
     addToDo(newToDo) {
-        
+        this.todoContainer.push(todo);
     }
 
-    deleteToDo(ToDoname) {
-
+    deleteToDo(todoName) {
+        const todo = this.todoContainer.find((todo) => todo.name === todoName);
+        this.todoContainer.splice(this.todoContainer.indexOf(todo), 1);
     }
 }
